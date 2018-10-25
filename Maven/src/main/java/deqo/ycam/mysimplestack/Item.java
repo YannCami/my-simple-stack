@@ -2,6 +2,7 @@ package deqo.ycam.mysimplestack;
 
 public class Item {
     private int value;
+    private String descriptor;
 
     public Item() {}
 
