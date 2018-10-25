@@ -2,6 +2,8 @@ package deqo.ycam.mysimplestack;
 
 import org.junit.Test;
 
+import java.util.EmptyStackException;
+
 import static org.junit.Assert.*;
 
 public class StackTest {
@@ -33,7 +35,7 @@ public class StackTest {
         assertEquals("This stack should now be of size 2.", stack.getSize(), 2);
     }
 
-    @Test
+    @Test(expected = EmptyStackException.class)
     public void testPeek() {
         Item item1 = new Item(3);
         Stack stack0 = new Stack();
@@ -42,9 +44,10 @@ public class StackTest {
         Item item2 = new Item(7);
         stack.push(item2);
         assertEquals("The first element of this stack should now be 7.", stack.peek().getValue(), 7);
+        stack0.peek();
     }
 
-    @Test
+    @Test(expected = EmptyStackException.class)
     public void testPop() {
         Item item1 = new Item(-14);
         Stack stack0 = new Stack();
@@ -54,5 +57,6 @@ public class StackTest {
         assertEquals("The first element removed from this stack should be 89.", stack.pop().getValue(), 89);
         assertEquals("The second element removed from this stack should be -14.", stack.pop().getValue(), -14);
         assertTrue("The stack should now be empty.", stack.isEmpty());
+        stack.pop();
     }
 }
