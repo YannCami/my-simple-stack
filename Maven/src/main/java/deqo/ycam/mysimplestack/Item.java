@@ -6,6 +6,10 @@ public class Item {
 
     public Item() {}
 
+    public Item(String descriptor) {
+        this.descriptor = descriptor;
+    }
+
     public Item(int value) {
         this.value = value;
     }
@@ -17,4 +21,6 @@ public class Item {
     public int getValue() {
         return value;
     }
+
+    public String getDescriptor() { return descriptor; }
 }
