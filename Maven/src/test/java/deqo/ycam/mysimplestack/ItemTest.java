@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class ItemTest {
     @Test
-    public void testGetter() {
+    public void testGetValue() {
         Item item = new Item(58);
         assertEquals("The value should be equal to 58", item.getValue(), 58);
     }

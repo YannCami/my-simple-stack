@@ -6,6 +6,11 @@ public class Stack implements SimpleStack {
     private Item head;
     private Stack tail;
 
+    public Stack() {
+        head = null;
+        tail = null;
+    }
+
     public Stack(Item h, Stack t) {
         head = h;
         tail = t;
@@ -23,8 +28,7 @@ public class Stack implements SimpleStack {
 
     @Override
     public void push(Item item) {
-        Stack newTail = new Stack(this.head, this.tail);
-        this.tail = newTail;
+        this.tail = new Stack(this.head, this.tail);
         this.head = item;
     }
 
