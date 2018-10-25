@@ -10,14 +10,14 @@ public class StackTest {
     @Test
     public void testIsEmpty() {
         Stack stack = new Stack();
-        assertTrue("This stack is empty. isEmpty() should return true.", stack.isEmpty());
+        assertTrue("This stack is not empty. isEmpty() should return true.", stack.isEmpty());
     }
 
     @Test
     public void testGetSize() {
         Item item = new Item();
         Stack stack0 = new Stack();
-        assertEquals("This stack is empty, its size should be 0.", stack0.getSize(), 0);
+        assertEquals("This stack is not empty, its size should be 0.", stack0.getSize(), 0);
         Stack stack1 = new Stack(item, stack0);
         assertEquals("This stack should be of size 1.", stack1.getSize(), 1);
         Stack stack2 = new Stack(item, stack1);
