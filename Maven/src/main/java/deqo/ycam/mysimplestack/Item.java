@@ -10,6 +10,11 @@ public class Item {
         this.descriptor = descriptor;
     }
 
+    public Item(String descriptor, int value) {
+        this.value = value;
+        this.descriptor = descriptor;
+    }
+
     public Item(int value) {
         this.value = value;
     }
